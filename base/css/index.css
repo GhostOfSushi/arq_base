@@ -1,0 +1,117 @@
+:root {
+    --fundo: #f8fafc;
+    --cartao: #ffffff;
+    --borda: #cbd5e1;
+    --texto: #0f172a;
+    --texto-suave: #475569;
+    --destaque: #0284c7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fundo: #0f172a;
+        --cartao: #1e293b;
+        --borda: #334155;
+        --texto: #f1f5f9;
+        --texto-suave: #94a3b8;
+        --destaque: #38bdf8;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+.topo {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.topo h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+.topo p {
+    margin: 0;
+    color: var(--texto-suave);
+}
+
+.grade {
+    max-width: 780px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.exemplo {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.exemplo:hover,
+.exemplo:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--destaque);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    outline: none;
+}
+
+.icone {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.numero {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--destaque);
+}
+
+.exemplo h2 {
+    margin: 4px 0 8px;
+    font-size: 18px;
+}
+
+.exemplo p {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--texto-suave);
+    flex: 1;
+}
+
+.abrir {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+.rodape {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+
+.rodape p {
+    margin: 0;
+}
